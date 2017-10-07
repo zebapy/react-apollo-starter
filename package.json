@@ -23,11 +23,13 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
+    "lint": "eslint src",
     "eject": "react-scripts eject",
     "precommit": "lint-staged"
   },
   "lint-staged": {
     "*.js": [
+      "npm run lint",
       "prettier --write --single-quote --jsx-bracket-same-line",
       "git add"
     ]
